@@ -14,7 +14,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/assets/font-awesome.min.css">
     <!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:600,700%7COpen+Sans:400,600" rel="stylesheet">     
+	<link href="css/assets/s.css"rel="stylesheet">     
 	<!-- Popup -->
 	<link href="css/assets/magnific-popup.css" rel="stylesheet"> 
 	<!-- Slick Slider -->
@@ -192,11 +192,38 @@
 
 
 <!-- Teachers Area section -->
+<script> 
+function GEEKFORGEEKS()                                    
+{               
+var email = document.forms["RegForm"]["EMail"];
+var password=document.forms["RegForm"]["Pass"];    
+  
+   
+   
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(email.value.match(mailformat))
+{
+
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+
+return false;
+}
+
+
+
+}
+</script> 
+  
+
 <section class="register-area">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6 col-sm-offset-3">
-				<form action="#" class="learnpro-register-form">
+				<form  action="/login.html" name="RegForm" onsubmit="return GEEKFORGEEKS()" method="post" class="learnpro-register-form">
 					<p class="lead">Register New Account</p>
 					<div class="form-group">
 					 	<input autocomplete="off" class="form-control" placeholder="First Name" type="text">
@@ -204,20 +231,22 @@
 					<div class="form-group">
 					 	<input autocomplete="off" class="form-control" placeholder="Last Name" type="text">
 					</div>						
-					<div class="form-group"> 
-					  	<input autocomplete="off" class="required form-control" placeholder="Username *" type="text">
-					</div>
-					<div class="form-group">
-					  <input class="required form-control" placeholder="Password *"  type="password">
+										
+<div class="form-group">
+					  <input class="required form-control" placeholder="Password *"  type="password" name="Pass" required minlength="4">
 					</div>		
 					<div class="form-group">
-					 	<input class="required form-control" placeholder="Email *" type="email">
+					 	<input class="required form-control" placeholder="Email *" type="email" name="EMail">
 					</div>	
-					<textarea class="form-control" placeholder="About / Bio" name="bio" rows="3" style="resize: none;"></textarea>
-
-					<div class="form-group register-btn">
-					 	<submit class="btn btn-primary btn-lg">Register</submit>
+							
+<div class="form-group">
+					 	<input class="required form-control" placeholder="Mobile" type="tel" minlength="10" maxlength="10" pattern="[6789][0-9]{9}$" name="mobile" id="mobile" >
 					</div>			
+<div class="form-group register-btn">
+					 	<input type="submit"class="btn btn-primary btn-lg name="Submit" value="Register">
+					</div>	
+							
+					<center><p>Already have an account? <a href="login.html"><strong>Login</strong></a></p>	</center>	
 				</form>
 			</div>												
 		</div>

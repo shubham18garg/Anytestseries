@@ -196,16 +196,17 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6 col-sm-offset-3">
-				<form action="#" class="learnpro-register-form text-center">
+				<form action="/login.html" class="learnpro-register-form text-center">
 					<p class="lead">Welcome Back</p>					
 					<div class="form-group"> 
-					  	<input autocomplete="off" class="required form-control" placeholder="Username *" name="name" type="text">
+					   <label for="email"></label>
+  <input class="required form-control" type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email *" required>
 					</div>
 					<div class="form-group">
-					  	<input class="required form-control" placeholder="Password *" name="password" type="password">
+					  	<input class="required form-control" placeholder="Password *" name="password"  type="password" required>
 					</div>		
 					<div class="form-group register-btn">
-					 	<submit class="btn btn-primary btn-lg">Register</submit>
+					 	<input type="submit"class="btn btn-primary btn-lg name="Submit" value="Login">
 					</div>
 					<a href="forgot_password.html"><strong>Forgot password?</strong></a>		
 					<p>Not a member? <a href="register.html"><strong>Join today</strong></a></p>	
